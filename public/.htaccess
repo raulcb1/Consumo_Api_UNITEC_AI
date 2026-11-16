@@ -1,0 +1,17 @@
+# =====================================================================
+# .htaccess - Configuración de Apache para SCPC
+# =====================================================================
+
+# --- Habilitar el motor de reescritura ---
+<IfModule mod_rewrite.c>
+    RewriteEngine On
+</IfModule>
+
+# --- Páginas de error personalizadas ---
+# La ruta debe ser absoluta desde el DocumentRoot (htdocs)
+ErrorDocument 404 /SCPCFrusan/public/404.php
+ErrorDocument 403 /SCPCFrusan/public/404.php
+ErrorDocument 500 /SCPCFrusan/public/404.php
+
+# --- Opcional: Evitar listado de directorios ---
+Options -Indexes
